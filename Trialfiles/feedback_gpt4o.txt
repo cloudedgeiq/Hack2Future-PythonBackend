@@ -1,0 +1,70 @@
+Suggested Mark: 6/10
+
+Feedback:
+The student has made a commendable effort in identifying and drawing key geographical features of India. The Himalayan Range is reasonably well-placed, and the Western Ghats are correctly identified. However, the Eastern Ghats are misplaced and incomplete, and the Aravalli Range is missing entirely. Additionally, some features like the Vindhya Range and Satpura Range are inaccurately positioned. Overall, the student demonstrates a good understanding of India's geography but needs to improve accuracy and completeness in feature placement.
+
+--- Bounding Box Details (from API) ---
+{
+  "correct": [
+    {
+      "feature_name": "Himalayan Range (Northern Section)",
+      "coordinates": [
+        50,
+        20,
+        300,
+        80
+      ]
+    },
+    {
+      "feature_name": "Western Ghats (Southern Part)",
+      "coordinates": [
+        70,
+        400,
+        120,
+        600
+      ]
+    }
+  ],
+  "incorrect_or_missing": [
+    {
+      "feature_name": "Aravalli Range",
+      "reason": "Missing",
+      "coordinates": [
+        150,
+        150,
+        200,
+        250
+      ]
+    },
+    {
+      "feature_name": "Eastern Ghats",
+      "reason": "Misplaced/Incomplete",
+      "coordinates": [
+        280,
+        300,
+        350,
+        500
+      ]
+    },
+    {
+      "feature_name": "Vindhya Range",
+      "reason": "Misplaced",
+      "coordinates": [
+        200,
+        250,
+        250,
+        300
+      ]
+    },
+    {
+      "feature_name": "Satpura Range",
+      "reason": "Misplaced",
+      "coordinates": [
+        220,
+        300,
+        270,
+        350
+      ]
+    }
+  ]
+}

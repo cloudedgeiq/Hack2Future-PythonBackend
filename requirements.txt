@@ -1,0 +1,5 @@
+Flask
+python-dotenv
+openai>=1.0.0 # Ensure you have a recent version for AzureOpenAI
+Pillow
+# Add other dependencies as you use them (e.g., azure-storage-blob)

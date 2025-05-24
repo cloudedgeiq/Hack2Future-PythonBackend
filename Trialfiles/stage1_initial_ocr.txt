@@ -1,0 +1,26 @@
+Here is the extracted handwritten text and mathematical expressions from the image:
+
+```
+X² - 8X + 15 = 0
+a = 1   b = -8   c = 15
+x₁,₂ = -b ± √(b² - 4ac)
+       2a
+       = -(-8) ± √((-8)² - 4(1)(15))
+       2(1)
+       = 8 ± √(64 - 60)
+       2
+       = 8 ± √4
+       2
+       = 8 ± 2
+       2
+x₁ = 8 + 2
+       2
+   = 10
+       2
+   = 5
+x₂ = 8 - 2
+       2
+   = 6
+       2
+   = 3
+```
