@@ -183,33 +183,33 @@ def ocr_with_azure_gpt4o_text(image_path_or_url,assignment_max_marks,student_cla
 
 
 
-# --- Example Usage ---
-if __name__ == "__main__":
-    local_image_path = "C:\\POC\\Hack2Future\\Hack2Future-PythonBackend\\trial_file\\BadImage.jpg"
-    if not os.path.exists(local_image_path) and not (local_image_path.startswith("http://") or local_image_path.startswith("https://")):
-        try:
-            from PIL import Image, ImageDraw, ImageFont
-            print(f"'{local_image_path}' not found. Attempting to create a dummy image for testing...")
-            img = Image.new('RGB', (600, 150), color = (255, 255, 255))
-            d = ImageDraw.Draw(img)
-            try:
-                font = ImageFont.truetype("arial.ttf", 40)
-            except IOError:
-                font = ImageFont.load_default()
-            d.text((10,10), "Hello Azure GPT-4o!\nThis is a test OCR image.", fill=(0,0,0), font=font)
-            os.makedirs(os.path.dirname(local_image_path) or '.', exist_ok=True)
-            img.save(local_image_path)
-            print(f"Dummy image saved as '{local_image_path}'")
-        except ImportError:
-            print("Pillow library not installed. Cannot create a dummy image.")
-            print(f"Please provide a valid path for 'local_image_path' or install Pillow: pip install Pillow")
-        except Exception as e:
-            print(f"Could not create dummy image: {e}")
+# # --- Example Usage ---
+# if __name__ == "__main__":
+#     local_image_path = "C:\\POC\\Hack2Future\\Hack2Future-PythonBackend\\trial_file\\BadImage.jpg"
+#     if not os.path.exists(local_image_path) and not (local_image_path.startswith("http://") or local_image_path.startswith("https://")):
+#         try:
+#             from PIL import Image, ImageDraw, ImageFont
+#             print(f"'{local_image_path}' not found. Attempting to create a dummy image for testing...")
+#             img = Image.new('RGB', (600, 150), color = (255, 255, 255))
+#             d = ImageDraw.Draw(img)
+#             try:
+#                 font = ImageFont.truetype("arial.ttf", 40)
+#             except IOError:
+#                 font = ImageFont.load_default()
+#             d.text((10,10), "Hello Azure GPT-4o!\nThis is a test OCR image.", fill=(0,0,0), font=font)
+#             os.makedirs(os.path.dirname(local_image_path) or '.', exist_ok=True)
+#             img.save(local_image_path)
+#             print(f"Dummy image saved as '{local_image_path}'")
+#         except ImportError:
+#             print("Pillow library not installed. Cannot create a dummy image.")
+#             print(f"Please provide a valid path for 'local_image_path' or install Pillow: pip install Pillow")
+#         except Exception as e:
+#             print(f"Could not create dummy image: {e}")
 
-    if os.path.exists(local_image_path) or local_image_path.startswith("http://") or local_image_path.startswith("https://"):
-        print(f"\n--- OCR for: {local_image_path} ---")
-        extracted_text_local = ocr_with_azure_gpt4o(local_image_path)
-        print("\nExtracted Text:")
-        print(extracted_text_local)
-    else:
-        print(f"\nSkipping local image OCR as '{local_image_path}' was not found and could not be created.")
+#     if os.path.exists(local_image_path) or local_image_path.startswith("http://") or local_image_path.startswith("https://"):
+#         print(f"\n--- OCR for: {local_image_path} ---")
+#         extracted_text_local = ocr_with_azure_gpt4o(local_image_path)
+#         print("\nExtracted Text:")
+#         print(extracted_text_local)
+#     else:
+#         print(f"\nSkipping local image OCR as '{local_image_path}' was not found and could not be created.")
